@@ -1,21 +1,39 @@
-<RadSideDrawer [transition]="drawerTransition">
+<RadSideDrawer [transition]="drawerTransition" showOverNavigation="true">
   <StackLayout tkDrawerContent class="sidedrawer-left">
     <side-nav></side-nav>
-                    <ListView items="{{ navMenu }}" class="list-group">
-                        <ListView.itemTemplate>
-                          <StackLayout>
-                              <Label class="list-group-item" text="{{ name }}">  
-                              
-                              </Label>
-                          </StackLayout>
-                        </ListView.itemTemplate>
-                      </ListView>
   </StackLayout>
-  <StackLayout tkMainContent>
-    <StackLayout [visibility]="isContentVisible ? 'visible' : 'collapsed'">
-      <ng-content ></ng-content>
-
-    </StackLayout>
+  <StackLayout tkMainContent class="main-content">
+    <ScrollView orientation="vertical" [visibility]="isContentVisible ? 'visible' : 'collapsed'" >
+      <StackLayout class="track-list">
+        <StackLayout
+            *ngFor="let singleTrack of AudioTrackList; let i=index" class="track-content">
+            <FlexboxLayout orientantion="horizontal" class="track-item" justifyContent="space-between">
+              <StackLayout class="list-item-description">
+                <Label
+                    class="list-item-name"
+                    [text]="singleTrack.name">
+                </Label>
+                <Label
+                    class="list-item-musician"
+                    [text]="singleTrack.musician">
+                </Label>
+              </StackLayout>
+              <FlexboxLayout alignContent="flex-start" class="list-item-price">
+                <Button
+                    verticalAlignment="middle"
+                    class="list-item-price-btn"
+                    [text]="singleTrack.price">
+                </Button>
+                <Button
+                    verticalAlignment="middle"
+                    class="mdi list-item-options-btn"
+                    text="{{'mdi-more-vert' | fonticon }}">
+                </Button>
+              </FlexboxLayout>
+            </FlexboxLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
     <GridLayout
         class="loader-container"
         [visibility]="!isContentVisible ? 'visible' : 'collapsed'">

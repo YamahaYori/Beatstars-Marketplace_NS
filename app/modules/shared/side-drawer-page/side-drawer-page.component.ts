@@ -18,6 +18,7 @@ import { TNSFontIconService } from 'nativescript-ng2-fonticon';
 @Component({
   selector: 'side-drawer-page',
   templateUrl: 'modules/shared/side-drawer-page/side-drawer-page.component.html',
+  styleUrls: ['modules/shared/side-drawer-page/side-drawer-page.component.css'],
 })
 export class SideDrawerPageComponent implements AfterViewInit, OnDestroy {
   @ViewChild(RadSideDrawerComponent) drawerComponent: RadSideDrawerComponent;
@@ -40,7 +41,33 @@ export class SideDrawerPageComponent implements AfterViewInit, OnDestroy {
     { name: 'About', commands: ['/about'] },
     { name: 'Contact', commands: ['/contact'] }
   ];
-
+  AudioTrackList: any[] = [
+    { name: 'yuck foo', musician: 'KnightMare - AudioPioneerEntertainment', price: '$20.00+'},
+    { name: 'Her Vision', musician: 'StunnahSezbeatz', price: '$20.00+'},
+    { name: "DJ Mustard Type Beat With Hook | Somebody's Girl", musician: 'Hooks R Us', price: '$20.00+'},
+    { name: 'Revivie', musician: 'Horus Beats', price: '$20.00+'},
+    { name: 'Traffic', musician: 'Taz Taylor', price: '$20.00+'},
+    { name: 'yuck foo', musician: 'KnightMare - AudioPioneerEntertainment', price: '$20.00+'},
+    { name: 'Her Vision', musician: 'StunnahSezbeatz', price: '$20.00+'},
+    { name: "DJ Mustard Type Beat With Hook | Somebody's Girl", musician: 'Hooks R Us', price: '$20.00+'},
+    { name: 'Revivie', musician: 'Horus Beats', price: '$20.00+'},
+    { name: 'Traffic', musician: 'Taz Taylor', price: '$20.00+'},
+    { name: 'yuck foo', musician: 'KnightMare - AudioPioneerEntertainment', price: '$20.00+'},
+    { name: 'Her Vision', musician: 'StunnahSezbeatz', price: '$20.00+'},
+    { name: "DJ Mustard Type Beat With Hook | Somebody's Girl", musician: 'Hooks R Us', price: '$20.00+'},
+    { name: 'Revivie', musician: 'Horus Beats', price: '$20.00+'},
+    { name: 'Traffic', musician: 'Taz Taylor', price: '$20.00+'},
+    { name: 'yuck foo', musician: 'KnightMare - AudioPioneerEntertainment', price: '$20.00+'},
+    { name: 'Her Vision', musician: 'StunnahSezbeatz', price: '$20.00+'},
+    { name: "DJ Mustard Type Beat With Hook | Somebody's Girl", musician: 'Hooks R Us', price: '$20.00+'},
+    { name: 'Revivie', musician: 'Horus Beats', price: '$20.00+'},
+    { name: 'Traffic', musician: 'Taz Taylor', price: '$20.00+'},
+    { name: 'yuck foo', musician: 'KnightMare - AudioPioneerEntertainment', price: '$20.00+'},
+    { name: 'Her Vision', musician: 'StunnahSezbeatz', price: '$20.00+'},
+    { name: "DJ Mustard Type Beat With Hook | Somebody's Girl", musician: 'Hooks R Us', price: '$20.00+'},
+    { name: 'Revivie', musician: 'Horus Beats', price: '$20.00+'},
+    { name: 'Traffic', musician: 'Taz Taylor', price: '$20.00+'},
+  ];
   private drawer: SideDrawerType;
 
   constructor(

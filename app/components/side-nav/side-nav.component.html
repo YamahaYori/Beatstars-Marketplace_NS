@@ -1,21 +1,52 @@
-<FlexLayout class="sidedrawer-header">
+<StackLayout orientation="horizontal" class="sidedrawer-header" verticalAlignment="middle">
     <!-- Set src attribute to the logo of the app -->
-    <Image
-        class="sidedrawer-header-image">
-    </Image>
     <Label
         class="sidedrawer-header-brand"
         text="Beatstars">
     </Label>
-</FlexLayout>
-<ScrollView>
+</StackLayout>
+<ScrollView class="sidebar-content">
     <StackLayout class="sidedrawer-content">
-        <GridLayout>
-            <Label class="mdi" text="{{'mdi-favorite' | fonticon }}">
+        <Label text="MARKETPLACE" class="sidebar-caption">
+        </Label>
+        <Label text="BROWSE MUSIC" class="sidebar-menu-item sidebar-sm-caption">
+        </Label>
+        <FlexboxLayout>
+            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
             </Label>
-            <Label text="Home" class="sidedrawer-list-item-text">
+            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
             </Label>               
-        </GridLayout>
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
+            </Label>
+            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
+            </Label>               
+        </FlexboxLayout>
+                <FlexboxLayout>
+            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
+            </Label>
+            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
+            </Label>               
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
+            </Label>
+            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
+            </Label>               
+        </FlexboxLayout>
+                <FlexboxLayout>
+            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
+            </Label>
+            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
+            </Label>               
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
+            </Label>
+            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
+            </Label>               
+        </FlexboxLayout>
     </StackLayout>
 </ScrollView>
 
