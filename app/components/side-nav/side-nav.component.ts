@@ -8,4 +8,37 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class SideNavComponent {
   text: string = 'Side-Nav';
+  menu_items: any[] = [
+    {
+      caption: "BROWSE MUSIC",
+      border: false,
+      items: [
+        {title: "Discover", icon: "mdi-view-carousel", link: ""},
+        {title: "Feed", icon: "mdi-wifi-tethering", link: ""},
+        {title: "Genres", icon: "mdi-library-music", link: ""},
+        {title: "Top Charts", icon: "mdi-equalizer", link: ""},
+        {title: "Caliabs", icon: "mdi-group", link: ""},
+        {title: "Free Music", icon: "mdi-headset", link: ""},
+      ]
+    },
+    {
+      caption: "YOUR MUSIC",
+      border: true,
+      items: [
+        {title: "Favorites", icon: "mdi-favorite-border", link: ""},
+        {title: "Purchased", icon: "mdi-add-shopping-cart", link: ""},
+        {title: "Lyrics", icon: "mdi-edit", link: ""},
+        {title: "History", icon: "mdi-history", link: ""},
+      ]
+    },
+    {
+      caption: "YOUR MUSIC",
+      border: true,
+      items: [
+        {title: "Public Playlist", icon: "mdi-playlist-play", link: ""},
+        {title: "Purchased", icon: "mdi-music-note", link: ""},
+        {title: "My First Playlist", icon: "mdi-playlist-add", link: ""},
+      ],
+    },
+  ];
 }

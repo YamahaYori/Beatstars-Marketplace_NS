@@ -9,44 +9,21 @@
     <StackLayout class="sidedrawer-content">
         <Label text="MARKETPLACE" class="sidebar-caption">
         </Label>
-        <Label text="BROWSE MUSIC" class="sidebar-menu-item sidebar-sm-caption">
-        </Label>
-        <FlexboxLayout>
-            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
+        <StackLayout *ngFor="let singleSection of menu_items;">    
+            <StackLayout [class]="singleSection.border? 'hr-light divider':'divider' "></StackLayout>
+            <Label [text]="singleSection.caption" class="sidebar-menu-item sidebar-sm-caption">
             </Label>
-            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
-            </Label>               
-        </FlexboxLayout>
-        <FlexboxLayout>
-            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
-            </Label>
-            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
-            </Label>               
-        </FlexboxLayout>
-                <FlexboxLayout>
-            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
-            </Label>
-            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
-            </Label>               
-        </FlexboxLayout>
-        <FlexboxLayout>
-            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
-            </Label>
-            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
-            </Label>               
-        </FlexboxLayout>
-                <FlexboxLayout>
-            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
-            </Label>
-            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
-            </Label>               
-        </FlexboxLayout>
-        <FlexboxLayout>
-            <Label class="mdi sidebar-menu-item sidebar-icon" text="{{'mdi-favorite' | fonticon }}">
-            </Label>
-            <Label class="sidebar-menu-item  sidebar-icon-item" text="Home">
-            </Label>               
-        </FlexboxLayout>
+            <FlexboxLayout *ngFor="let item of singleSection.items;">
+                <Label class="mdi sidebar-menu-item sidebar-icon" text="{{item.icon | fonticon }}">
+                </Label>
+                <Label class="sidebar-menu-item  sidebar-icon-item" [text]="item.title">
+                </Label>               
+            </FlexboxLayout>
+        </StackLayout>  
+        <Button
+            class="btn-add-playlist"
+            text="ADD NEW PLAYLIST">
+        </Button>
     </StackLayout>
 </ScrollView>
 
