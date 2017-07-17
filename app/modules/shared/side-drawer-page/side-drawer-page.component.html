@@ -1,0 +1,30 @@
+<RadSideDrawer [transition]="drawerTransition">
+  <StackLayout tkDrawerContent class="sidedrawer-left">
+    <side-nav></side-nav>
+                    <ListView items="{{ navMenu }}" class="list-group">
+                        <ListView.itemTemplate>
+                          <StackLayout>
+                              <Label class="list-group-item" text="{{ name }}">  
+                              
+                              </Label>
+                          </StackLayout>
+                        </ListView.itemTemplate>
+                      </ListView>
+  </StackLayout>
+  <StackLayout tkMainContent>
+    <StackLayout [visibility]="isContentVisible ? 'visible' : 'collapsed'">
+      <ng-content ></ng-content>
+
+    </StackLayout>
+    <GridLayout
+        class="loader-container"
+        [visibility]="!isContentVisible ? 'visible' : 'collapsed'">
+      <ActivityIndicator
+          width="30"
+          height="30"
+          [busy]="!isContentVisible"
+          class="activity-indicator">
+      </ActivityIndicator>
+    </GridLayout>
+  </StackLayout>
+</RadSideDrawer>
