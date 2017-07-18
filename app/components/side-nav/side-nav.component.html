@@ -1,5 +1,11 @@
 <StackLayout orientation="horizontal" class="sidedrawer-header" verticalAlignment="middle">
     <!-- Set src attribute to the logo of the app -->
+    <Button
+        class="mdi"
+        text="{{'mdi-menu' | fonticon }}"
+        (tap)="onTapSidebar()"
+        >
+    </Button>
     <Label
         class="sidedrawer-header-brand"
         text="Beatstars">

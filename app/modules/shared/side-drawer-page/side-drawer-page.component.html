@@ -1,6 +1,8 @@
+<top-nav (onToggleSideNav)="toggleDrawer()">
+</top-nav>
 <RadSideDrawer [transition]="drawerTransition" showOverNavigation="true">
   <StackLayout tkDrawerContent class="sidedrawer-left">
-    <side-nav></side-nav>
+    <side-nav (onToggleSideNav)="toggleDrawer()"></side-nav>
   </StackLayout>
   <StackLayout tkMainContent class="main-content">
     <ScrollView orientation="vertical" [visibility]="isContentVisible ? 'visible' : 'collapsed'" >

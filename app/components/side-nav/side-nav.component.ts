@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'side-nav',
@@ -41,4 +41,8 @@ export class SideNavComponent {
       ],
     },
   ];
+  @Output() onToggleSideNav = new EventEmitter()
+  onTapSidebar() {
+    this.onToggleSideNav.emit();
+  }
 }

@@ -5,6 +5,7 @@ import { NativeScriptUISideDrawerModule } from 'nativescript-telerik-ui/sidedraw
 
 import { SideDrawerPageComponent } from './side-drawer-page';
 import { SideNavComponent } from '../../components/side-nav/side-nav.component';
+import { TopNavComponent } from '../../components/top-nav/top-nav.component';
 import { BorderlessBtnDirective } from './borderless-btn.directive';
 import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 
@@ -19,6 +20,7 @@ import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
   declarations: [
     SideDrawerPageComponent,
     SideNavComponent,
+    TopNavComponent,
     BorderlessBtnDirective
   ],
   exports: [

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'top-nav',
@@ -6,5 +6,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TopNavComponent {
+  @Output() onToggleSideNav = new EventEmitter()
   text: string = 'Top-Nav';
+  onTapSidebar() {
+    this.onToggleSideNav.emit();
+  }
 }
