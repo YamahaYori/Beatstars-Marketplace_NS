@@ -39,12 +39,16 @@
   font-weight: bold;
   margin: 24px;
 }
-
+.btn-toggle-drawer {
+  color: white;
+  font-size: 24px;
+}
 
 
 .sidedrawer-header .sidedrawer-header-brand {
   font-size: 18px;
   color: #fff;
+  margin-left: 20px;
 }
 
 .sidedrawer-content .sidedrawer-list-item-text {
