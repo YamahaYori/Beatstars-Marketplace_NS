@@ -1,6 +1,6 @@
 # Nativescript-Beatstars
 
-npm install
+yarn
 tns run ios
 tns run android
 
