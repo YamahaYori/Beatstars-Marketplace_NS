@@ -1,0 +1,29 @@
+<StackLayout class="track-list">
+    <StackLayout
+        *ngFor="let singleTrack of AudioTrackList; let i=index" class="track-content">
+        <FlexboxLayout orientantion="horizontal" class="track-item" justifyContent="space-between">
+        <StackLayout class="list-item-description">
+            <Label
+                class="list-item-name"
+                [text]="singleTrack.name">
+            </Label>
+            <Label
+                class="list-item-musician"
+                [text]="singleTrack.musician">
+            </Label>
+        </StackLayout>
+        <FlexboxLayout alignContent="flex-start" class="list-item-price">
+            <Button
+                verticalAlignment="middle"
+                class="list-item-price-btn"
+                [text]="singleTrack.price">
+            </Button>
+            <Button
+                verticalAlignment="middle"
+                class="mdi list-item-options-btn"
+                text="{{'mdi-more-vert' | fonticon }}">
+            </Button>
+        </FlexboxLayout>
+        </FlexboxLayout>
+    </StackLayout>
+</StackLayout>
