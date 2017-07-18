@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-    selector: 'tracklist',
+    selector: 'free-music',
     templateUrl: 'containers/free-music/free-music.container.html',
     styleUrls: ['containers/free-music/free-music.container.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
